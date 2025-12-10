@@ -8,16 +8,30 @@ IBM Telco Customer Churn dataset.
 
 ## The Model
 
-The model is a simple logistic regression model built using `scikit-learn`.
+The model is logistic regression model built using `scikit-learn`.
 
 The model currently uses the following features:
 - `tenure`: Number of months the customer has stayed with the company.
 - `MonthlyCharges`: The amount charged to the customer monthly.
 - `TechSupport_yes`: Binary indicator of whether the customer has tech support.
+- `Contract_month-to-month`: Binary indicator of whether the customer has month-to-month contract.
+- `InternetService_fiber`: Binary indicator of whether the customer has tech fiber internet service.
 
-We recommend looking into additional features and engineering new ones to
-improve model performance. There are other possible issues to explore, including
-model choice, leakage, and others.
+We compared logistic regression, Random Forest and Gradient Boosting model to find a best model for the prediction, while Random Forest and Gradient Boosting show marginal improvements over Logistic Regression, we have chosen to move forward with Logistic Regression for the following reasons:
+
+### Performance:
+Logistic Regression achieves almost similar performance (within 1-2% of ensemble methods)
+The marginal performance gains from more complex models do not justify added complexity
+
+### Interpretability:
+Logistic Regression provides clear, interpretable coefficients
+Easy to explain feature importance and churn drivers to stakeholders
+
+### Computational Efficiency:
+Significantly faster training and inference
+Lower memory footprint for deployment
+Easier to maintain and update in production
+
 
 The model is built and trained using `notebooks/telco_marimo.py`. The model is
 saved in the `models/` directory, with the scaler and model bundled together
