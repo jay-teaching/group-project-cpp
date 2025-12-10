@@ -33,7 +33,7 @@ def _():
 
     SAVE_MODEL = False
 
-    SELECTED_FEATURES = ["tenure", "MonthlyCharges", "TechSupport_yes"]
+    SELECTED_FEATURES = ["tenure", "MonthlyCharges", "TechSupport_yes", "OnlineSecurity_yes","gender_male","PaymentMethod_credit card (automatic)"]
     TEST_SIZE = 0.20
     C_VALUE = 1.0
     MAX_ITER = 1000
