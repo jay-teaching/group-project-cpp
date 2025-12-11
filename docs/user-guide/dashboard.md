@@ -10,7 +10,7 @@ graph LR
     A[👤 Login] --> B[📝 Input Data]
     B --> C{⚡ Run Prediction}
     C -->|Low Risk| D[✅ No Action]
-    C -->|High Risk| E[🎁 Offer Discount]
+    C -->|High Risk| E[🎁 Notify, want to preform an action, like Offer Discount or something]
     style C fill:#f9f,stroke:#333,stroke-width:2px
 ```
 
