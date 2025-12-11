@@ -36,7 +36,7 @@ def _():
     DATA_PATH = Path("input/WA_Fn-UseC_-Telco-Customer-Churn.csv")
     MODEL_SAVE_PATH = Path("models/telco_logistic_regression.joblib")
 
-    SAVE_MODEL = False
+    SAVE_MODEL = True
     TEST_SIZE = 0.20
     C_VALUE = 1.0
     MAX_ITER = 1000
