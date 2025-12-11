@@ -9,6 +9,7 @@ dependencies = [
     "fastapi>=0.124.2",
     "joblib>=1.5.2",
     "marimo>=0.17.8",
+    "mkdocs-material>=9.7.0",
     "pandas>=2.3.3",
     "requests>=2.32.5",
     "scikit-learn>=1.7.2",
