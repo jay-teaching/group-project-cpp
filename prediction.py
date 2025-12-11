@@ -9,8 +9,8 @@ Expect only the features defined in the model built by `telco_marimo.py`.
 import joblib
 import pandas as pd
 
-# Edit this list to match the features used in your model
-FEATURE_ORDER = ["tenure", "MonthlyCharges", "TechSupport_yes"]
+
+FEATURE_ORDER = ["tenure", "MonthlyCharges", "TechSupport_yes", "Contract_month-to-month", "InternetService_fiber optic"]
 
 
 BUNDLE = joblib.load("models/telco_logistic_regression.joblib")
