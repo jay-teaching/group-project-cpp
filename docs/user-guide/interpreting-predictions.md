@@ -6,9 +6,13 @@ Understanding *how* the model makes decisions, and *what* the risk score means, 
 
 The model outputs a probability between **0%** (0.00) and **100%** (1.00).
 
-!!! abstract "Risk Levels"
-    -   **Safe Zone (< 50%)**: The customer is stable.
-    -   **Danger Zone (> 50%)**: The customer is at risk of churning.
+### ⚡ Probability Cheat Sheet
+
+| Score | Risk Level | Recommended Action |
+| :--- | :--- | :--- |
+| **0% - 30%** | 🟢 Low | No action needed. Customer is happy. |
+| **30% - 70%** | 🟡 Medium | **Monitor**. Check if they have a support ticket open. |
+| **70% - 100%** | 🔴 High | **Act Now!** Offer a discount or schedule a call. |
 
 The dashboard uses a visual **Risk Meter** to represent this:
 
@@ -23,7 +27,7 @@ graph LR
 
 ## Key Drivers of Churn
 
-Our Logistic Regression model has identified several key factors that influence churn:
+Our model uses **Logistic Regression**, which is like a straightforward "points system". It assigns positive or negative points to customer features to calculate the total risk.
 
 ### 🔻 Factors that REDUCE Churn (Good)
 *   **High Tenure**: Long-term customers are less likely to leave.

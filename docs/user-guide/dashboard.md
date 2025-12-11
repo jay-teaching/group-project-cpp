@@ -2,6 +2,18 @@
 
 The **Telco Churn Prediction Dashboard** allows you to interactively test the model with customer data.
 
+
+## User Journey
+
+```mermaid
+graph LR
+    A[👤 Login] --> B[📝 Input Data]
+    B --> C{⚡ Run Prediction}
+    C -->|Low Risk| D[✅ No Action]
+    C -->|High Risk| E[🎁 Offer Discount]
+    style C fill:#f9f,stroke:#333,stroke-width:2px
+```
+
 ## Interface Overview
 
 The dashboard is divided into three main sections:
@@ -10,11 +22,17 @@ The dashboard is divided into three main sections:
 2.  **Logic & Control**: The "Run Prediction" button.
 3.  **Results Display**: The risk probability and recommendation.
 
-![Dashboard Preview](https://placehold.co/600x400?text=Dashboard+Screenshot)
+![Dashboard Preview](telco.png)
 
 ### 1. Customer Profile Inputs
 
 Enter the customer's current details in the form.
+
+!!! example "Scenario: Meet Bob 👨"
+    **Bob** has been with us for only **2 months** (New customer). He pays **$90/month** (High bill) and is on a **Month-to-Month** contract.
+    
+    *   **Expectation**: Bob is likely **High Risk**.
+    *   **Action**: Input `Tenure=2`, `Monthly=$90`, `Contract=Month-to-Month`.
 
 !!! tip "Tip: Default Values"
     The form comes pre-filled with "average" customer values to help you get started quickly.

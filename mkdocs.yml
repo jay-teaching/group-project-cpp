@@ -45,6 +45,11 @@ markdown_extensions:
 
 plugins:
   - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [.]
+
 
 nav:
   - Home: index.md

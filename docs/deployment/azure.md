@@ -4,9 +4,12 @@ This guide walks you through deploying the Churn Prediction model to **Azure Fun
 
 ## Prerequisites
 
--   An active **Azure Subscription**.
--   **VS Code** with the **Azure Functions** extension installed.
--   The **Azure CLI** (or usage of Cloud Shell).
+Before you start, ensure you have the following ready:
+
+- [ ] An active **Azure Subscription**.
+- [ ] **VS Code** with the **Azure Functions** extension installed.
+- [ ] The **Azure CLI** installed and logged in (`az login`).
+- [ ] The project opened in VS Code.
 
 ## Deployment Steps
 
@@ -50,6 +53,17 @@ In your local VS Code environment:
 3.  Right-click the Function App and select **Deploy to Function App...**.
 4.  Select your project folder.
 5.  Wait for the deployment to finish.
+
+## ❓ Troubleshooting
+
+### "Cold Start" Delays
+**Symptom**: The first request takes 10+ seconds.
+**Cause**: Serverless functions "sleep" when not used to save money.
+**Fix**: This is normal! Subsequent requests will be fast.
+
+### Module Not Found Error
+**Symptom**: `ImportError: No module named 'sklearn'` in logs.
+**Fix**: Ensure `scikit-learn` is listed in `requirements.txt`. Azure only installs packages listed there.
 
 ## Verifying the Deployment
 

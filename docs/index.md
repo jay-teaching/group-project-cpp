@@ -1,14 +1,16 @@
 # Welcome to the Telco Churn Predictor
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.13-blue.svg" alt="Python Version">
-  <img src="https://img.shields.io/badge/Azure-Functions-0078D4.svg" alt="Azure Functions">
-  <img src="https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B.svg" alt="Streamlit">
+  <img src="https://img.shields.io/badge/Python-3.13-blue.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python Version">
+  <img src="https://img.shields.io/badge/Azure%20Functions-v4-0078D4.svg?style=for-the-badge&logo=azurefunctions&logoColor=white" alt="Azure Functions">
+  <img src="https://img.shields.io/badge/Streamlit-1.40-FF4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit">
+  <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License">
 </p>
 
-**Predict customer churn with the power of Machine Learning.** 🚀
-
-This project provides a complete end-to-end solution for identifying customers at risk of leaving. It combines a robust **Logistic Regression** model, a serverless **Azure Function** API, and an interactive **Streamlit Dashboard**.
+!!! quote ""
+    **Stop Churn Before It Happens.** 🚀
+    
+    A state-of-the-art machine learning solution to identify at-risk customers and take action. Powered by **Logistic Regression** and **Serverless Cloud Architecture**.
 
 ---
 
