@@ -4,9 +4,10 @@ Minimal Azure Functions predictor for the Telco churn model.
 
 import joblib
 import pandas as pd
+from typing import List
 
 
-MODEL_COLUMNS = [
+MODEL_COLUMNS: List[str] = [
     "tenure", 
     "MonthlyCharges", 
     "TechSupport_yes",              
