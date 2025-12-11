@@ -12,7 +12,7 @@ def fetch_prediction(payload: dict) -> dict:
     # --- Testing ---
     if response.status_code == 422:
         
-        st.error("数据格式错误 (422)！详细信息如下：")
+        st.error("Data Format Error (422)! Details as follows:")
         st.json(response.json()) 
         response.raise_for_status() 
     # -------------------
