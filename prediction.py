@@ -10,7 +10,13 @@ import joblib
 import pandas as pd
 
 
-FEATURE_ORDER = ["tenure", "MonthlyCharges", "TechSupport_yes", "Contract_month-to-month", "InternetService_fiber optic"]
+MODEL_COLUMNS = [
+    "tenure", 
+    "MonthlyCharges", 
+    "TechSupport_yes", 
+    "Contract_Month-to-month",  
+    "InternetService_Fiber optic" 
+]
 
 
 BUNDLE = joblib.load("models/telco_logistic_regression.joblib")
@@ -18,18 +24,21 @@ MODEL, SCALER = BUNDLE["model"], BUNDLE["scaler"]
 
 
 def make_prediction(**kwargs: float) -> float:
-    """Make a churn prediction given the input features.
+    "Make a churn prediction given the input features."
 
-    Adjust FEATURE_ORDER above according to the model definition.
-    """
-    # Extract features in the correct order
     try:
-        args = [kwargs[feature] for feature in FEATURE_ORDER]
+        data_row = [
+            kwargs["tenure"],
+            kwargs["MonthlyCharges"],
+            kwargs["TechSupport"],         
+            kwargs["ContractMonthToMonth"], 
+            kwargs["FiberOptic"]           
+        ]
     except KeyError as e:
-        raise ValueError(f"Missing feature: {e.args[0]}") from e
+        raise ValueError(f"Missing Feature: {e.args[0]}") from e
+
     
-    # Format features for scaling
-    features = pd.DataFrame([args], columns=FEATURE_ORDER) # type: ignore
+    features = pd.DataFrame([data_row], columns=MODEL_COLUMNS)
 
     # Scale features with saved scaler
     scaled = SCALER.transform(features)
@@ -37,6 +46,5 @@ def make_prediction(**kwargs: float) -> float:
     # Predict with saved model
     prob = float(MODEL.predict_proba(scaled)[0, 1])
 
-    # Output the probability
     print(f"Churn probability: {prob:.4f}")
     return prob
