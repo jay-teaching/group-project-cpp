@@ -11,11 +11,15 @@ def http_trigger_predict_cpp_group(req: func.HttpRequest) -> func.HttpResponse:
     tenure = req.params.get('tenure')
     monthly = req.params.get('monthly')
     techsupport = req.params.get('techsupport')
+    month_to_month = req.params.get('month_to_month')
+    fiber_optic = req.params.get('fiber_optic')
 
     prediction = make_prediction(
         tenure=tenure,
         MonthlyCharges=monthly,
-        TechSupport_yes=techsupport
+        TechSupport_yes=techsupport,
+        ContractMonthToMonth_yes=month_to_month,
+        FiberOptic_yes=fiber_optic
     )
 
     if tenure and monthly and techsupport:
