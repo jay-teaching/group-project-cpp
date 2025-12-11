@@ -36,7 +36,7 @@ def make_prediction(**kwargs: float) -> float:
         raise ValueError(f"API parameter missing: {e.args[0]}") from e
 
    
-    features = pd.DataFrame([data_row], columns=MODEL_COLUMNS)
+    features = pd.DataFrame([data_row], columns=pd.Index(MODEL_COLUMNS))
 
    
     scaled = SCALER.transform(features)
