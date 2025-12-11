@@ -1,4 +1,19 @@
-# Telco Churn Predictions
+# 📊 Telco Churn Predictor
+
+<p align="center">
+  <a href="https://jay-teaching.github.io/group-project-cpp/">
+    <img src="https://img.shields.io/badge/📖_Read_the_Full_Docs-Click_Here-2ea44f?style=for-the-badge&logo=github" alt="Read the Docs">
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.12+-blue?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Azure_Functions-v4-0078D4?style=flat-square&logo=azurefunctions&logoColor=white" />
+  <img src="https://img.shields.io/badge/Streamlit-1.40-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" />
+  <img src="https://img.shields.io/github/actions/workflow/status/jay-teaching/group-project-cpp/docs.yml?label=Docs%20Build&style=flat-square" />
+</p>
+
+---
 
 This repository contains code to build and deploy a machine learning
 model that predicts customer churn for a telecommunications company
@@ -143,4 +158,3 @@ or chose it through the `...` menu.
     - Test the function using the *Test/Run* option in the Function
         - Provide the required parameters (tenure, monthly, techsupport)
         - Run the test and check the output for the prediction result.
-
